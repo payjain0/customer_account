@@ -3,7 +3,7 @@
     <http:listener-config name="customer_account-httpListenerConfig">
         <http:listener-connection host="0.0.0.0" port="8081" />
     </http:listener-config>
-    <apikit:config name="customer_account-config" api="resource::36057033-c6b8-425d-b699-d6ff24032443:customer_account:1.0.0:raml:zip:customer_account.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
+    <apikit:config name="customer_account-config" api="resource::36057033-c6b8-425d-b699-d6ff24032443:customer_account:1.0.2:raml:zip:customer_account.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
     <flow name="customer_account-main">
         <http:listener config-ref="customer_account-httpListenerConfig" path="/api/*">
             <http:response statusCode="#[vars.httpStatus default 200]">
